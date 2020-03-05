@@ -1,0 +1,17 @@
+/* global it describe */
+var assert = require('assert');
+var markup = require('../src/markup');
+
+describe('Bizmathjs-markup', function () {
+  it('Markup value', function () {
+    assert.strictEqual(markup.byValue(100, 20), 120);
+  });
+
+  it('markup by percentage', function () {
+    assert.strictEqual(markup.byPercentage(100, 20), 120);
+  });
+
+  it('what was the markup', function () {
+    assert.strictEqual(markup.was(100, 120), 20);
+  });
+});
